@@ -1,6 +1,6 @@
 #netuitive.packages.azure.ag 1.0.0
 
-For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/datasources.htm).
+For detailed information on this package, please refer to the [online documentation](https://help.netuitive.com/Content/Integrations/microsoft_azure.htm).
 
 ##Release History
 
