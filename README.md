@@ -1,8 +1,12 @@
-#netuitive.packages.azure.ag 1.0.0
+#netuitive.packages.azure.ag 1.1.0
 
 For detailed information on this package, please refer to the [online documentation](https://help.netuitive.com/Content/Integrations/microsoft_azure.htm).
 
 ##Release History
+
+###Version 1.1.0
+
+* Updated gridstack dashboard layouts
 
 ###Version 1.0.0
 
