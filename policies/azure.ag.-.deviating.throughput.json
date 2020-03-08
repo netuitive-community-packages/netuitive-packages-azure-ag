@@ -19,7 +19,9 @@
     "enabled": true,
     "name": "Azure AG - Deviating Throughput",
     "scope": {
-      "elementType": "Application Gateway"
+      "elementTypes": [
+        "Application Gateway"
+      ]
     }
   }
 }
