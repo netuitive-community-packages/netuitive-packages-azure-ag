@@ -1,141 +1,95 @@
 {
-  "dashboard" : {
-    "name" : "Azure AG Element Detail Page",
-    "description" : null,
-    "layout" : null,
-    "properties" : {
-      "timeRangeDuration" : "3600",
-      "gridstackContents" : "[{\"id\":\"0a52501c-cca7-47da-8e71-cff712d75d5c\",\"x\":6,\"y\":0,\"width\":6,\"height\":9},{\"id\":\"cceb75c2-6d9b-4f28-91ee-fa4027b77352\",\"x\":0,\"y\":0,\"width\":6,\"height\":9},{\"id\":\"01086484-6b36-4f1d-a81e-c94aa4c20545\",\"x\":0,\"y\":18,\"width\":12,\"height\":10},{\"id\":\"ca83071c-50cd-46dd-b50d-4d051e10009c\",\"x\":0,\"y\":9,\"width\":6,\"height\":9},{\"id\":\"d0f707b2-8dd5-4a2c-acd2-b84087892413\",\"x\":6,\"y\":9,\"width\":6,\"height\":9}]",
-      "refreshIntervalSeconds" : "300",
-      "wrap" : "true"
+  "dashboard": {
+    "name": "Azure AG Element Detail Page",
+    "private": false,
+    "properties": {
+      "gridstackContents": "[{\"id\":\"0a52501c-cca7-47da-8e71-cff712d75d5c\",\"x\":6,\"y\":0,\"width\":6,\"height\":9},{\"id\":\"cceb75c2-6d9b-4f28-91ee-fa4027b77352\",\"x\":0,\"y\":0,\"width\":6,\"height\":9},{\"id\":\"01086484-6b36-4f1d-a81e-c94aa4c20545\",\"x\":0,\"y\":18,\"width\":12,\"height\":10},{\"id\":\"ca83071c-50cd-46dd-b50d-4d051e10009c\",\"x\":0,\"y\":9,\"width\":6,\"height\":9},{\"id\":\"d0f707b2-8dd5-4a2c-acd2-b84087892413\",\"x\":6,\"y\":9,\"width\":6,\"height\":9}]",
+      "refreshIntervalSeconds": "300",
+      "timeRangeDuration": "3600",
+      "wrap": "true"
     },
-    "widgets" : [ {
-      "id" : "0a52501c-cca7-47da-8e71-cff712d75d5c",
-      "name" : "Throughput Over Time",
-      "description" : null,
-      "widgetType" : "metric-time-series",
-      "properties" : {
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "element_fqn" :  null,
-        "metricAggs" : "[\"avg\"]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "showHighest" : "true",
-        "metric_fqn" : "azure.applicationgateway.throughput",
-        "metricScopeTags" : "[]",
-        "width" : "auto",
-        "metrics" : "[]",
-        "selectedTab" : "table"
+    "type": "Application Gateway",
+    "widgets": [
+      {
+        "id": "0a52501c-cca7-47da-8e71-cff712d75d5c",
+        "name": "Throughput Over Time",
+        "properties": {
+          "metricAggs": "[\"avg\"]",
+          "metricLimit": "10",
+          "metric_fqn": "azure.applicationgateway.throughput",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "width": "auto"
+        },
+        "widgetType": "metric-time-series"
+      },
+      {
+        "id": "cceb75c2-6d9b-4f28-91ee-fa4027b77352",
+        "name": "Current Throughput",
+        "properties": {
+          "metricAggs": "[\"avg\"]",
+          "metricLimit": "10",
+          "metric_fqn": "azure.applicationgateway.throughput",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "width": "small"
+        },
+        "widgetType": "metric-agg"
+      },
+      {
+        "id": "01086484-6b36-4f1d-a81e-c94aa4c20545",
+        "name": "Events",
+        "properties": {
+          "elementScopeTypes": "[\"Application Gateway\"]",
+          "metricLimit": "10",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "width": "small"
+        },
+        "widgetType": "event-ticker"
+      },
+      {
+        "id": "ca83071c-50cd-46dd-b50d-4d051e10009c",
+        "name": "Attributes",
+        "properties": {
+          "metricLimit": "10",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "width": "auto"
+        },
+        "widgetType": "element-attributes"
+      },
+      {
+        "id": "d0f707b2-8dd5-4a2c-acd2-b84087892413",
+        "name": "Tags",
+        "properties": {
+          "metricLimit": "10",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "width": "auto"
+        },
+        "widgetType": "element-tags"
       }
-    }, {
-      "id" : "cceb75c2-6d9b-4f28-91ee-fa4027b77352",
-      "name" : "Current Throughput",
-      "description" : null,
-      "widgetType" : "metric-agg",
-      "properties" : {
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "element_fqn" :  null,
-        "metricAggs" : "[\"avg\"]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "showHighest" : "true",
-        "metric_fqn" : "azure.applicationgateway.throughput",
-        "metricScopeTags" : "[]",
-        "width" : "small",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "01086484-6b36-4f1d-a81e-c94aa4c20545",
-      "name" : "Events",
-      "description" : null,
-      "widgetType" : "event-ticker",
-      "properties" : {
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "elementScopeTypes" : "[\"Application Gateway\"]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "showHighest" : "true",
-        "metricScopeTags" : "[]",
-        "width" : "small",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "ca83071c-50cd-46dd-b50d-4d051e10009c",
-      "name" : "Attributes",
-      "description" : null,
-      "widgetType" : "element-attributes",
-      "properties" : {
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "element_fqn" :  null,
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "showHighest" : "true",
-        "metricScopeTags" : "[]",
-        "width" : "auto",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "d0f707b2-8dd5-4a2c-acd2-b84087892413",
-      "name" : "Tags",
-      "description" : null,
-      "widgetType" : "element-tags",
-      "properties" : {
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "element_fqn" :  null,
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "showHighest" : "true",
-        "metricScopeTags" : "[]",
-        "width" : "auto",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    } ],
-    "type" : "Application Gateway",
-    "private" : false
+    ]
   }
 }

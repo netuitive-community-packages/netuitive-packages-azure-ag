@@ -1,38 +1,27 @@
 {
-  "policy" : {
-    "id" : null,
-    "name" : "Azure AG - Deviating Throughput",
-    "description" : "The throughput on the application gateway has either been higher or lower than expected for at least the past 30 minutes.",
-    "scope" : {
-      "elementName" : null,
-      "elementNameExclude" : null,
-      "fqnIncludes" : [ ],
-      "fqnExcludes" : [ ],
-      "elementType" : "Application Gateway",
-      "elementTags" : { }
-    },
-    "duration" : 1800,
-    "conditions" : [ {
-      "metric" : "azure.applicationgateway.throughput",
-      "wildcard" : null,
-      "metricScopeTags" : { },
-      "analytic" : "baselineDeviation",
-      "operator" : "defined",
-      "level" : null,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    } ],
-    "eventConditions" : [ ],
-    "actions" : [ {
-      "type" : "event",
-      "category" : 2
-    } ],
-    "enabled" : true,
-    "deleted" : false,
-    "originTenantId" : null,
-    "originPolicyId" : null,
-    "creatorEmail" : null,
-    "lastUpdated" : null
+  "policy": {
+    "actions": [
+      {
+        "category": 2,
+        "type": "event"
+      }
+    ],
+    "conditions": [
+      {
+        "analytic": "baselineDeviation",
+        "metric": "azure.applicationgateway.throughput",
+        "operator": "defined"
+      }
+    ],
+    "deleted": false,
+    "description": "The throughput on the application gateway has either been higher or lower than expected for at least the past 30 minutes.",
+    "duration": 1800,
+    "enabled": true,
+    "name": "Azure AG - Deviating Throughput",
+    "scope": {
+      "elementTypes": [
+        "Application Gateway"
+      ]
+    }
   }
 }
