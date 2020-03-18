@@ -2,6 +2,8 @@
 
 ### Version next
 
+### Version 1.3.0
+
 * Adjusted build to use metricly-cli for validation
 * Convert single elementType to elementTypes array in policy scope
 
